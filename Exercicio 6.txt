@@ -1,6 +1,6 @@
 6. Faça um programa com as seguintes informações: nome, cargo e salário de um funcionário. Se o funcionário ganhar abaixo de 1000 reais, calcule o salário acrescido de 10%. Ao final exiba o nome, o cargo e o salário reajustado desse funcionário.
 
-int salario = 1333;
+int salario = 999;
 int resultado = 0;
 String nome = "Leonardo";
 String cargo = "Programador Junior";
@@ -15,14 +15,19 @@ Serial.begin(9600);
   {
      resultado = salario+(salario*0.10);
     
-     
+     Serial.print("Salario do funcionario ");
+     Serial.print(nome);
+     Serial.print(" que exerce cargo de ");
+     Serial.print(cargo);
+     Serial.print(" reajustado para ");
+     Serial.print(resultado);
   
   
   }
   
   else
   {
-  	Serial.print("Salario do funcionario ");
+  	 Serial.print("Salario do funcionario ");
      Serial.print(nome);
      Serial.print(" que exerce cargo de ");
      Serial.print(cargo);
