@@ -1,0 +1,32 @@
+1. Controle de Temperatura - Escreva um programa para acionar um alarme (ligar um LED) quando a temperatura for superior a 30°C.
+
+#define Alarme 13
+float temperatura = 29;
+ void setup()
+ {
+Serial.begin(9600);
+pinMode(Alarme,OUTPUT);
+if (temperatura > 30)
+	{
+	
+	digitalWrite(Alarme,HIGH);
+    Serial.print("A temperatura excede 30 graus");
+
+	}
+  
+else 
+	{
+
+  	digitalWrite(Alarme,LOW);	
+    Serial.print("A temperatura nao excede 30 graus");
+	}
+ 
+
+}
+
+void loop()
+{
+
+
+
+}
