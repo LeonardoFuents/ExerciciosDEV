@@ -1,0 +1,52 @@
+float peso = 95 ;
+float altura = 1.80 ;
+float imc = 0 ;
+
+void setup()
+{
+  Serial.begin(9600);
+  
+    imc = peso / sq(altura);
+    Serial.print("O calculo do IMC e : ");
+    Serial.println(imc);
+  
+  if(imc < 18.5)
+   {
+ 
+    Serial.println("O IMC calculado e classificado em MAGREZA");
+  
+   }
+  
+  else if(imc <= 24.9)
+   {
+ 
+    Serial.println("O IMC calculado e classificado em NORMAL");
+  
+   }
+  
+  else if(imc <= 29.9)
+   {
+ 
+    Serial.println("O IMC calculado e classificado em SOBREPESO");
+  
+   }
+  
+  else if(imc <= 39.9)
+   {
+ 
+    Serial.println("O IMC calculado e classificado em OBESIDADE");
+  
+   }
+
+  else if(imc >= 40.0)
+   {
+ 
+    Serial.println("O IMC calculado e classificado em OBESIDADE GRAVE");
+  
+   }
+}
+
+void loop()
+{
+ 
+}
