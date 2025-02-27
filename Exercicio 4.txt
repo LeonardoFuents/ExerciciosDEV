@@ -1,0 +1,38 @@
+4- Acender o Led caso o numero seja par - Escreva um programa que acenda um Led caso o numero avaliado seja par.
+
+
+#define LED 13
+int numero = 115;
+
+
+void setup()
+{
+  pinMode(LED,OUTPUT);
+  Serial.begin(9600);
+  
+ if(numero % 2 == 0) 
+  {
+   digitalWrite(LED,HIGH);
+   Serial.print("O numero ");
+   Serial.print(numero); 
+   Serial.print(" e par ");
+  
+  }
+  
+ else
+  {
+   digitalWrite(LED,LOW);
+   Serial.print("O numero ");
+   Serial.print(numero); 
+   Serial.print(" e impar");
+  
+  }
+
+}
+
+void loop()
+{
+
+
+
+}

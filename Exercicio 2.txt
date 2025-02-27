@@ -1,0 +1,34 @@
+2. Alerta de Bateria - Escreva um código que acione um alerta quando a bateria estiver entre 20% e 80%.
+
+int bateria = 20;
+#define Alerta 13
+
+
+void setup()
+{
+ pinMode(Alerta,OUTPUT);
+ Serial.begin(9600);
+ 
+   if (bateria <= 80 && bateria >= 20 )
+   
+  	{
+	
+	digitalWrite(Alerta,HIGH);
+    Serial.print("A bateria esta entre 20 e 80");
+
+	}
+  
+else 
+	{
+
+   	digitalWrite(Alerta,LOW);	
+    Serial.print("A bateria nao esta entre 20 e 80");
+	}
+}
+
+void loop()
+{
+  
+
+  
+}

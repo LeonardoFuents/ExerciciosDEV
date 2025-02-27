@@ -1,0 +1,44 @@
+3. Crie um programa que avalie um valor, converta esse valor de um intervalo de 0 a 1023 para um novo intervalo de 0 a 100, em seguida coloque o resultado entre os limites 20 e 80, caso o valor exceda os limites acenda um LED de alerta e mostre no terminal a mensagem "O valor __ excedeu os limites, valor reajustado para __".
+
+int valor = 1000;
+int resultado = 0;
+int limite = 0;
+#define Alerta 13
+
+void setup()
+{
+	Serial.begin(9600);
+    pinMode(Alerta,OUTPUT);
+
+	resultado = map (valor,0,1023,0,100);
+	limite = constrain(resultado,20,80);
+  	
+    if (resultado >= 20 && resultado <= 80)
+    {
+      digitalWrite(Alerta, LOW);
+  	  Serial.print("O valor ");
+      Serial.print(resultado);
+  	  Serial.print(" nao excedeu os limites ");
+     
+    }  
+  
+   else 
+  	{ 
+      digitalWrite(Alerta, HIGH);
+  	  Serial.print("O valor ");
+      Serial.print(resultado);
+  	  Serial.print(" excedeu os limites , valor reajustado para ");
+  	  Serial.print(limite);
+   	 
+    }
+  
+}
+
+
+
+void loop()
+{
+
+
+
+}

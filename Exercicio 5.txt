@@ -1,0 +1,32 @@
+5. Faça um programa que avalie um número inteiro e informe se este número é positivo ou negativo.
+
+int numero = -1;
+
+void setup()
+{
+
+  Serial.begin(9600);
+  if(numero < 0)
+  {
+   Serial.print("O numero indicado e negativo");
+   
+    
+    
+  }
+  else if (numero >= 0)
+  {
+  
+  Serial.print("O numero indicado e positivo");
+  
+  }
+
+}
+
+
+void loop()
+{
+
+
+
+
+}
