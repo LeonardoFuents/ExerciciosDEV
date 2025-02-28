@@ -1,6 +1,3 @@
-8. Faça um programa avalie dois valores e imprima qual é o maior número.
-
-
 int valorA = 0;
 int valorB = 20;
 
@@ -9,7 +6,10 @@ void setup()
 Serial.begin(9600);
 	if(valorA > valorB)
     {
-     
+     Serial.print("O valor de ");
+     Serial.print(valorA);
+     Serial.print(" e maior do que o valor de ");
+     Serial.print(valorB);
     
     }
 	else if (valorA == valorB)
