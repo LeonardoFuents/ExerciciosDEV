@@ -1,0 +1,65 @@
+#define LED1 13
+#define LED2 12
+#define LED3 11
+#define LED4 10
+#define LED5 9
+
+int numeroLED = 5;
+
+void setup()
+{
+
+  Serial.begin(9600);
+  pinMode(LED1,OUTPUT);
+  pinMode(LED2,OUTPUT);    
+  pinMode(LED3,OUTPUT);
+  pinMode(LED4,OUTPUT);
+  pinMode(LED5,OUTPUT);
+  	
+  switch(numeroLED)
+  {
+    case 1:
+    digitalWrite(LED1,HIGH);
+    Serial.print("O LED 1 esta acionado");
+                 
+
+    break;
+
+    case 2:
+    digitalWrite(LED2,HIGH);
+    Serial.print("O LED 2 esta acionado");
+
+    break;
+
+    case 3:
+    digitalWrite(LED3,HIGH);
+    Serial.print("O LED 3 esta acionado");
+
+    break;
+
+    case 4:
+    digitalWrite(LED4,HIGH);
+    Serial.print("O LED 4 esta acionado");
+
+    break;
+
+    case 5:
+    digitalWrite(LED5,HIGH);
+    Serial.print("O LED 5 esta acionado");
+
+    break;
+    
+    default:
+    Serial.print("Opcao invalida");
+    
+    break;
+  }
+
+}
+
+void loop()
+{
+
+
+
+}
