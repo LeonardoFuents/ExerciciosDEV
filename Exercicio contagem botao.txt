@@ -1,0 +1,35 @@
+#define botao 10
+
+
+int contagem = 0;
+
+
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(botao,INPUT);
+  
+  
+   		
+}
+
+void loop()
+{
+ 
+  static bool botaoAnterior = 0; 
+  bool botaoAtual = digitalRead(botao);
+  
+  
+  if(botaoAtual == 1 && botaoAnterior == 0  )
+    
+  {
+    contagem ++;
+    
+    Serial.println(contagem);    
+    
+  }
+   
+   botaoAnterior = botaoAtual;
+
+}
