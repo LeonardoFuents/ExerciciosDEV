@@ -1,0 +1,39 @@
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27,20,4);
+
+const int Botao1 = 8 ; 
+const int ledVermelho = 13;
+bool estadoLed = 1;
+
+
+void setup() {
+  pinMode(ledVermelho, OUTPUT);
+  pinMode(Botao1, INPUT);
+  lcd.init(); //Inicia o LCD
+  lcd.backlight();
+  lcd.setCursor(0,1); //Posiciona o cursor na primeira coluna linha 2
+
+}
+
+void loop() {
+
+static bool botaoAnterior = 0; 
+  bool botaoAtual = digitalRead(Botao1);
+  
+  if(botaoAtual == 1 && botaoAnterior == 0 )
+    
+  {
+    lcd.clear();
+    estadoLed = !estadoLed;
+    digitalWrite(ledVermelho,estadoLed);
+    
+    if(estadoLed == 1) lcd.print("LED Ligado");   
+
+    if(estadoLed == 0) lcd.print("LED Desligado");  
+  }
+   
+   botaoAnterior = botaoAtual;
+   
+
+}
